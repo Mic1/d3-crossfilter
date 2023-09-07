@@ -1,0 +1,25 @@
+.dc-chart th {
+	text-align: left;
+}
+.dc-chart th,
+.dc-chart td {
+	padding-left: 10px;
+}
+.dc-chart tr.dc-table-group td {
+	padding-top: 4px;
+	border-bottom: 1px solid black;
+}
+.dc-chart li {
+	width: 15rem;
+}
+.dc-cbox-group {
+	list-style-type: none;
+	margin-left: 0;
+}
+.dc-cbox-group label {
+	display: inline-block;
+}
+.dc-cbox-group input[type="checkbox"],
+.dc-cbox-group input[type="radio"] {
+	margin: 0 5px 5px 5px;
+}

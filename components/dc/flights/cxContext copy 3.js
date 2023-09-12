@@ -24,12 +24,12 @@ let ndx = 987;
 let ndx2 = null;
 
 export function DataContext({ data, children }) {
-	console.log("DataContext1: ", data[0]);
+	// console.log("DataContext1: ", data[0]);
 	const [hasNDX, setHasNDX] = useState(null);
 	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
-		console.log("useEffect_data", data.length);
+		// console.log("useEffect_data", data.length);
 		// console.log("useEffect_data", data[0]);
 	}, [data]);
 

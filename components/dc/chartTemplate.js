@@ -45,7 +45,7 @@ export const ChartTemplate = (props) => {
 
 	React.useEffect(() => {
 		const newChart = props.chartFunction(div.current, ndx); // chartfunction takes the ref and does something with it
-		console.log("newChart: ", props);
+		// console.log("newChart: ", props);
 		newChart.render();
 		updateChart(newChart);
 	}, []);

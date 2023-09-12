@@ -4,10 +4,10 @@ import React from "react";
 import { CXContext2 } from "./cxContext2";
 
 function Header(ndx) {
-	console.log("HeaderRender: ");
+	// console.log("HeaderRender: ");
 	const context = React.useContext(CXContext2);
 	const all = context.ndx.groupAll().value();
-	console.log("Header: ", all);
+	// console.log("Header: ", all);
 	// const title = context.ndx.all();
 
 	return (

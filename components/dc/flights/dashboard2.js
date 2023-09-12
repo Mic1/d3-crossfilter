@@ -97,24 +97,24 @@ const Dashboard2 = (props) => {
 
 	useEffect(() => {
 		subscribe("reset", (e) => {
-			console.log("subscribeReset: ", e);
+			// console.log("subscribeReset: ", e);
 			setSelectIndex(1);
 		});
 	}, []);
 
 	const handleSelectChange = (filterObject) => {
 		setSelectIndex(filterObject);
-		console.log("handleSelectChange1: ", dc.chartRegistry.list()[2]);
-		console.log(
-			"handleSelectChange2: ",
-			dc.chartRegistry.list()[3].chartID()
-		);
+		// console.log("handleSelectChange1: ", dc.chartRegistry.list()[2]);
+		// console.log(
+		// 	"handleSelectChange2: ",
+		// 	dc.chartRegistry.list()[3].chartID()
+		// );
 
 		setFilter(JSON.parse(filterObject));
 	};
 
 	const handleReset = () => {
-		console.log("handleReset: ");
+		// console.log("handleReset: ");
 		setSelectIndex(JSON.stringify(questions[0]));
 	};
 
@@ -133,7 +133,7 @@ const Dashboard2 = (props) => {
 								className="p-1 w-5/6 h-30 border bg-slate-300 border-slate-700 shadow-lg"
 								value={selectIndex}
 								onChange={(e) => {
-									console.log("e.target: ", e.target.value);
+									// console.log("e.target: ", e.target.value);
 									handleSelectChange(e.target.value);
 								}}
 							>

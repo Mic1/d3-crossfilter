@@ -47,7 +47,7 @@ export const ChartTemplate = (props) => {
     By passing the key to the parent div, we get a rerender once the chart is defined. 
     */
 
-	console.log("ChartTemplate: ", props);
+	// console.log("ChartTemplate: ", props);
 
 	const context = React.useContext(CXContext2);
 	const [chart, updateChart] = React.useState(null);
@@ -61,11 +61,11 @@ export const ChartTemplate = (props) => {
 	useEffect(() => {
 		const newChart = props.chartFunction(div.current, ndx); // chartfunction takes the ref and does something with it
 		// newChart.chartGroup(testChartGroup);
-		console.log(
-			"ChartTemplate useEffect.ID: ",
-			newChart.chartID(),
-			props.chartId
-		);
+		// console.log(
+		// 	"ChartTemplate useEffect.ID: ",
+		// 	newChart.chartID(),
+		// 	props.chartId
+		// );
 		// if (props.chartId) {
 		// 	console.log("push!!!: ", props.chartId, newChart.chartID());
 		// 	props.handleLookupChange({
@@ -82,28 +82,28 @@ export const ChartTemplate = (props) => {
 	useEffect(() => {
 		// console.log("ChartTemplate useEffect2: ", props);
 
-		console.log("DEBUG: ", props.filter);
+		// console.log("DEBUG: ", props.filter);
 
 		if (chart && props.filter) {
-			console.log(
-				"ChartTemplate useEffect2in: ",
-				chart,
-				props.title,
-				props.filter,
-				props.filter.chartId,
-				props.chartId
-			);
+			// console.log(
+			// 	"ChartTemplate useEffect2in: ",
+			// 	chart,
+			// 	props.title,
+			// 	props.filter,
+			// 	props.filter.chartId,
+			// 	props.chartId
+			// );
 
 			if (props.chartId === props.filter.chartId) {
-				console.log("Match Ids: ", props.chartId, props.filter.chartId);
+				// console.log("Match Ids: ", props.chartId, props.filter.chartId);
 				const theFilter = props.filter.chartFilter;
-				console.log(
-					"filterApply: ",
-					props.title,
-					props.chartId,
-					props.filter.chartId,
-					props.filter.chartFilter
-				);
+				// console.log(
+				// 	"filterApply: ",
+				// 	props.title,
+				// 	props.chartId,
+				// 	props.filter.chartId,
+				// 	props.filter.chartFilter
+				// );
 
 				dc.filterAll();
 				console.log("chart.filter: ", chart.filter());
@@ -117,10 +117,10 @@ export const ChartTemplate = (props) => {
 							props.filter.chartFilter.to
 					)
 				);
-				console.log("Match so: chart.filter: ", chart.filter());
+				// console.log("Match so: chart.filter: ", chart.filter());
 				dc.redrawAll();
 			} else {
-				console.log("No Match: ", props.title, props.filter.chartName);
+				// console.log("No Match: ", props.title, props.filter.chartName);
 			}
 		}
 	}, [props.filter]);

@@ -24,7 +24,7 @@ let ndx = 987;
 let ndx2 = null;
 
 export function DataContext({ data, children }) {
-	console.log("DataContext1: ", data[0]);
+	// ("DataContext1: ", data[0]);
 	const [hasNDX, setHasNDX] = useState(null);
 	const [loading, setLoading] = useState(false);
 
@@ -51,55 +51,55 @@ export function DataContext({ data, children }) {
 		d.distance = +d.distance;
 	});
 
-	console.log("context_data", data.length);
+	// console.log("context_data", data.length);
 
 	ndx = crossfilter(data);
-	console.log("useEffect_ndx", ndx);
+	// console.log("useEffect_ndx", ndx);
 	const all = ndx.groupAll();
 
 	const date = ndx.dimension(function (d) {
 		return d.date;
 	});
-	console.log("date", date);
-	console.log("date.top", date.top(10));
+	// console.log("date", date);
+	// console.log("date.top", date.top(10));
 	const dates = date.group(timeDay);
 	const hour = ndx.dimension(function (d, i) {
 		if (i < 10) {
-			console.log("d.date.getHours()", d.date.getHours());
-			console.log("d.date.getMinutes()", d.date.getMinutes());
+			// console.log("d.date.getHours()", d.date.getHours());
+			// console.log("d.date.getMinutes()", d.date.getMinutes());
 		}
 		return d.date.getHours() + d.date.getMinutes() / 60;
 	});
-	console.log("hour", hour);
-	console.log("hour.top", hour.top(10));
+	// console.log("hour", hour);
+	// console.log("hour.top", hour.top(10));
 
 	const hours = hour.group(Math.floor);
-	console.log("hours", hours);
-	console.log("hours.top", hours.top(10));
+	// console.log("hours", hours);
+	// console.log("hours.top", hours.top(10));
 	const delay = ndx.dimension(function (d) {
 		return Math.max(-60, Math.min(149, d.delay));
 	});
-	console.log("delay: ", delay);
-	console.log("delay.top: ", delay.top(10));
+	// console.log("delay: ", delay);
+	// console.log("delay.top: ", delay.top(10));
 	const delays = delay.group(function (d) {
 		return Math.floor(d / 10) * 10;
 	});
-	console.log("delays: ", delays);
-	console.log("delays.top: ", delays.top(10));
+	// console.log("delays: ", delays);
+	// console.log("delays.top: ", delays.top(10));
 	const distance = ndx.dimension(function (d) {
 		return Math.min(1999, d.distance);
 	});
-	console.log("distance: ", distance);
-	console.log("distance.top: ", distance.top(10));
+	// console.log("distance: ", distance);
+	// console.log("distance.top: ", distance.top(10));
 	const distances = distance.group(function (d) {
 		return Math.floor(d / 50) * 50;
 	});
-	console.log("distances: ", distances);
-	console.log("distances.top: ", distances.top(10));
+	// console.log("distances: ", distances);
+	// console.log("distances.top: ", distances.top(10));
 	setLoading(false);
 	setHasNDX(true);
 
-	console.log("context_ndx: ", ndx.size());
+	// console.log("context_ndx: ", ndx.size());
 
 	return (
 		<CXContext.Provider value={{ ndx: ndx }}>{children}</CXContext.Provider>

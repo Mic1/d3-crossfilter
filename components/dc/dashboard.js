@@ -12,7 +12,7 @@ import { DataTable } from "./nasdaqTable";
 import { DataContext } from "./cxContext";
 
 const Dashboard = (props) => {
-	console.log("DashboardRender");
+	// console.log("DashboardRender");
 
 	return (
 		<div className="p-4 mt-8">

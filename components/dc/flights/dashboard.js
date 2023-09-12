@@ -5,7 +5,7 @@ import { ArrivalDelayChart } from "./arrivalDelayChart";
 import { DistanceChart } from "./distanceChart";
 
 function Dashboard({ data }) {
-	console.log("DashboardRender: ", data[0]);
+	// console.log("DashboardRender: ", data[0]);
 	return (
 		<DataContext data={data}>
 			<div className="mx-auto container grid grid-cols-12">

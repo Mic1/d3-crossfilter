@@ -29,7 +29,7 @@ function parseDate(d) {
 }
 
 function crossFilter(data) {
-	console.log("crossfilter", data[0]);
+	// console.log("crossfilter", data[0]);
 	const groupByDate = group(data, (d) => timeDay(d.date));
 	// A little coercion, since the CSV is untyped.
 	const parseTime = timeParse("%B %d, %Y");
@@ -41,7 +41,7 @@ function crossFilter(data) {
 		d.distance = +d.distance;
 	});
 
-	console.log("data[0]", data[0]);
+	// console.log("data[0]", data[0]);
 
 	// Create the crossfilter for the relevant dimensions and groups.
 	const ndx = crossfilter(data);

@@ -41,7 +41,7 @@ export function DataContext({ data, children }) {
 	};
 
 	useEffect(() => {
-		console.log("DataContext.useEffect: ", data[0], typeof data[0].date);
+		// console.log("DataContext.useEffect: ", data[0], typeof data[0].date);
 
 		if (!data.length) {
 			return;
@@ -52,7 +52,7 @@ export function DataContext({ data, children }) {
 		setLoading(true);
 
 		if (!hasNDX) {
-			console.log("not hasNDX");
+			// console.log("not hasNDX");
 
 			// console.log("useEffect.ProcessData: ", data[0]);
 			if (typeof data[0].date === "string") {

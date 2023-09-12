@@ -36,8 +36,8 @@ async function Viz1() {
 	const vizData = await fetchData();
 	// console.log(crossfilter);
 	const data = csvParse(vizData);
-	console.log(data.length);
-	console.log("crossFilter", crossFilter(data));
+	// console.log(data.length);
+	// console.log("crossFilter", crossFilter(data));
 
 	return (
 		<DataContext data={data}>

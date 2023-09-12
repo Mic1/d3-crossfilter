@@ -1,7 +1,7 @@
 //events.js
 
 function subscribe(eventName, listener) {
-	console.log("subscribe: ", eventName, listener);
+	// console.log("subscribe: ", eventName, listener);
 
 	document.addEventListener(eventName, listener);
 }
@@ -11,7 +11,7 @@ function unsubscribe(eventName, listener) {
 }
 
 function publish(eventName, data) {
-	console.log("publish: ", eventName, data);
+	// console.log("publish: ", eventName, data);
 	const event = new CustomEvent(eventName, { detail: data });
 	document.dispatchEvent(event);
 }

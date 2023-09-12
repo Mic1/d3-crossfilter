@@ -11,7 +11,7 @@ const timeOfDayFunc = (divRef, ndx) => {
 	const timeOfDay = ndx.dimension(function (d) {
 		return d.date.getHours() + d.date.getMinutes() / 60;
 	});
-	console.log("timeOfDayFunc: ");
+	// console.log("timeOfDayFunc: ");
 	// timeOfDay.filter(filter);
 	const group = timeOfDay.group(Math.floor);
 
@@ -33,9 +33,9 @@ const timeOfDayFunc = (divRef, ndx) => {
 export const TimeofDayChart = ({ filter, chartId }) => {
 	const [filter1, setFilter1] = useState([20, 24]);
 	// const chartId = 8;
-	console.log("TimeofDayChart.chartID: ", chartId);
+	// console.log("TimeofDayChart.chartID: ", chartId);
 	if (filter) {
-		console.log("TimeofDayChart.filter: ", filter);
+		// console.log("TimeofDayChart.filter: ", filter);
 		// ndx.dimension.timeOfDay.filter([20, 24]);
 	}
 

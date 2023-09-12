@@ -5,7 +5,7 @@ import { CXContext } from "./cxContext";
 
 function TestComp() {
 	const context = React.useContext(CXContext);
-	console.log("TestComp: ", context.ndx);
+	// console.log("TestComp: ", context.ndx);
 	return <div>TestComp</div>;
 }
 

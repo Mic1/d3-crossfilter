@@ -5,7 +5,7 @@ import * as dc from "dc";
 import { ChartTemplate } from "./chartTemplate";
 
 const dayOfWeekFunc = (divRef, ndx) => {
-	console.log("!!!DayOfWeek2.ndx: ", ndx.size());
+	// console.log("!!!DayOfWeek2.ndx: ", ndx.size());
 
 	const dayOfWeekChart = dc.rowChart(divRef);
 	const dimension = ndx.dimension(function (d) {

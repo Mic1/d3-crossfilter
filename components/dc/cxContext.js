@@ -18,7 +18,7 @@ export class DataContext extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log("cxContextcomponentDidMount");
+		// console.log("cxContextcomponentDidMount");
 		if (this.state.hasNDX) {
 			return;
 		}
